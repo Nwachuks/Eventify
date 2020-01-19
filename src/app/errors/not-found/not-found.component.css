@@ -1,0 +1,11 @@
+.errorTitle {
+  margin-top: 150px;
+  font-size: 170px;
+  text-align: center;
+}
+
+.errorMessage {
+  margin-top: -20px;
+  font-size: 70px;
+  text-align: center;
+}
