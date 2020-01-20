@@ -1,7 +1,8 @@
-import { EventService } from './../../shared/event.service';
 import { Component, OnInit } from '@angular/core';
-import { ToastrService } from 'src/app/shared/toastr.service';
 import { ActivatedRoute } from '@angular/router';
+import { IEvent } from './../../shared/event.model';
+import { EventService } from './../../shared/event.service';
+import { ToastrService } from 'src/app/shared/toastr.service';
 
 // declare let toastr;
 @Component({
@@ -10,7 +11,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./events-list.component.css']
 })
 export class EventsListComponent implements OnInit {
-  events: any[];
+  events: IEvent[];
   // eventObject = {
   //   id: 1,
   //   name: 'Angular Connect',

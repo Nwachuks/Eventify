@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { appRoutes } from './routes';
 
 import { AppComponent } from './app.component';
+import { NavBarComponent } from './nav-bar/nav-bar/nav-bar.component';
+
 import { EventsListComponent } from './events/events-list/events-list.component';
 import { EventThumbnailComponent } from './events/event-thumbnail/event-thumbnail.component';
-import { NavBarComponent } from './nav-bar/nav-bar/nav-bar.component';
 import { EventDetailsComponent } from './events/event-details/event-details.component';
 import { CreateEventComponent } from './events/create-event/create-event.component';
+
 import { NotFoundComponent } from './errors/not-found/not-found.component';
 
 // Lazy loaded
@@ -18,9 +20,9 @@ import { NotFoundComponent } from './errors/not-found/not-found.component';
 @NgModule({
   declarations: [
     AppComponent,
+    NavBarComponent,
     EventsListComponent,
     EventThumbnailComponent,
-    NavBarComponent,
     EventDetailsComponent,
     CreateEventComponent,
     NotFoundComponent
