@@ -1,6 +1,7 @@
-import { RouterModule } from '@angular/router';
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { appRoutes } from './routes';
 
 import { AppComponent } from './app.component';
@@ -12,6 +13,7 @@ import { EventDetailsComponent } from './events/event-details/event-details.comp
 import { CreateEventComponent } from './events/create-event/create-event.component';
 
 import { NotFoundComponent } from './errors/not-found/not-found.component';
+import { CreateSessionComponent } from './events/create-session/create-session.component';
 
 // Lazy loaded
 // import { ProfileComponent } from './user/profile/profile.component';
@@ -25,12 +27,15 @@ import { NotFoundComponent } from './errors/not-found/not-found.component';
     EventThumbnailComponent,
     EventDetailsComponent,
     CreateEventComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    CreateSessionComponent
     // Lazy loaded
     // ProfileComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(appRoutes)
   ],
   exports: [
