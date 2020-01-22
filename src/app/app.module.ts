@@ -11,9 +11,10 @@ import { EventsListComponent } from './events/events-list/events-list.component'
 import { EventThumbnailComponent } from './events/event-thumbnail/event-thumbnail.component';
 import { EventDetailsComponent } from './events/event-details/event-details.component';
 import { CreateEventComponent } from './events/create-event/create-event.component';
+import { CreateSessionComponent } from './events/create-session/create-session.component';
+import { SessionsListComponent } from './events/sessions-list/sessions-list.component';
 
 import { NotFoundComponent } from './errors/not-found/not-found.component';
-import { CreateSessionComponent } from './events/create-session/create-session.component';
 
 // Lazy loaded
 // import { ProfileComponent } from './user/profile/profile.component';
@@ -28,7 +29,8 @@ import { CreateSessionComponent } from './events/create-session/create-session.c
     EventDetailsComponent,
     CreateEventComponent,
     NotFoundComponent,
-    CreateSessionComponent
+    CreateSessionComponent,
+    SessionsListComponent
     // Lazy loaded
     // ProfileComponent
   ],
