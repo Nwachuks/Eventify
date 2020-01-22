@@ -15,6 +15,7 @@ import { CreateSessionComponent } from './events/create-session/create-session.c
 import { SessionsListComponent } from './events/sessions-list/sessions-list.component';
 
 import { NotFoundComponent } from './errors/not-found/not-found.component';
+import { CollapsibleWellComponent } from './collapsible/collapsible-well/collapsible-well.component';
 
 // Lazy loaded
 // import { ProfileComponent } from './user/profile/profile.component';
@@ -30,7 +31,8 @@ import { NotFoundComponent } from './errors/not-found/not-found.component';
     CreateEventComponent,
     NotFoundComponent,
     CreateSessionComponent,
-    SessionsListComponent
+    SessionsListComponent,
+    CollapsibleWellComponent
     // Lazy loaded
     // ProfileComponent
   ],
