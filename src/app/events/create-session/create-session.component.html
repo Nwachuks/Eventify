@@ -6,13 +6,13 @@
     <div class="form-group" [ngClass]="{'error': name.invalid && name.dirty}">
       <label for="sessionName">Session Name:</label>
       <em *ngIf="name.invalid && name.dirty">Required</em>
-      <input formControlName="name" id="sessionName" type="text" class="form-control" placeholder="Session name" />
+      <input formControlName="name" id="sessionName" type="text" class="form-control" placeholder="Session name">
     </div>
     <div class="form-group" [ngClass]="{'error': presenter.invalid && presenter.dirty}">
-      <!-- for should be presenter -->
+      <!-- for value should be presenter -->
       <label for="eventDate">Presenter:</label>
       <em *ngIf="presenter.invalid && presenter.dirty">Required</em>
-      <input formControlName="presenter" id="presenter" type="text" class="form-control" placeholder="Name of presenter" />
+      <input formControlName="presenter" id="presenter" type="text" class="form-control" placeholder="Name of presenter">
     </div>
     <div class="form-group" [ngClass]="{'error': duration.invalid && duration.dirty}">
       <label for="duration">Duration:</label>
@@ -39,6 +39,7 @@
       <label for="abstract">Abstract:</label>
       <em *ngIf="abstract.invalid && abstract.dirty && abstract?.errors.required">Required</em>
       <em *ngIf="abstract.invalid && abstract.dirty && abstract?.errors.maxlength">Cannot exceed 400 characters</em>
+      <em *ngIf="abstract.invalid && abstract.dirty && abstract?.errors.restrictedWords">Restricted words found: {{abstract.errors.restrictedWords}}</em>
       <textarea formControlName="abstract" id="abstract" rows=3 class="form-control" placeholder="Brief description of session"></textarea>
     </div>
     <button type="submit" [disabled]="newSessionForm.invalid" class="btn btn-primary">Save</button>
