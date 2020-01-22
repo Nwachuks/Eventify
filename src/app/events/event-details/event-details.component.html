@@ -9,9 +9,9 @@
 
   <div class="row">
     <div class="col-md-6">
-      <div><strong>Date:</strong> {{event?.date}}</div>
+      <div><strong>Date:</strong> {{event?.date | date}}</div>
       <div><strong>Time:</strong> {{event?.time}}</div>
-      <div><strong>Price:</strong> ${{event?.price}}</div>
+      <div><strong>Price:</strong> {{event?.price | currency:'USD'}}</div>
     </div>
     <div class="col-md-6">
       <address *ngIf="event?.location">
@@ -30,7 +30,7 @@
     </div>
 
     <div class="col-md-2">
-      <a (click)="addSession()">Add Session</a>
+      <a (click)="addSession()" style="float: right;">Add Session</a>
     </div>
   </div>
 

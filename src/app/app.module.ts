@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { appRoutes } from './routes';
+import { DurationPipe } from './shared/duration.pipe';
 
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar/nav-bar.component';
@@ -32,7 +33,8 @@ import { CollapsibleWellComponent } from './collapsible/collapsible-well/collaps
     NotFoundComponent,
     CreateSessionComponent,
     SessionsListComponent,
-    CollapsibleWellComponent
+    CollapsibleWellComponent,
+    DurationPipe
     // Lazy loaded
     // ProfileComponent
   ],
