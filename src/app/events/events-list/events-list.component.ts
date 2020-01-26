@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { IEvent } from './../../shared/event.model';
 import { EventService } from './../../shared/event.service';
 import { ToastrService } from 'src/app/shared/toastr.service';
+// import { ToastrService } from 'ngx-toastr';
 
 // declare let toastr;
 @Component({
@@ -38,7 +39,7 @@ export class EventsListComponent implements OnInit {
     this.events = this.route.snapshot.data['events'];
   }
 
-  handleThumbnailClick(eventName) {
-    this.toastr.success(eventName);
-  }
+  // handleThumbnailClick(eventName) {
+  //   this.toastr.success(eventName);
+  // }
 }

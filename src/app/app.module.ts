@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+// import { ToastrModule } from 'ngx-toastr';
 import { appRoutes } from './routes';
-import { DurationPipe } from './shared/duration.pipe';
 
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar/nav-bar.component';
@@ -17,7 +17,14 @@ import { SessionsListComponent } from './events/sessions-list/sessions-list.comp
 
 import { NotFoundComponent } from './errors/not-found/not-found.component';
 import { CollapsibleWellComponent } from './collapsible/collapsible-well/collapsible-well.component';
+import { SimpleModalComponent } from './simple-modal/simple-modal.component';
 
+import { DurationPipe } from './shared/duration.pipe';
+import { JQ_TOKEN } from './shared/jQuery.service';
+
+import { ModalTriggerDirective } from './shared/modal-trigger.directive';
+
+const jQuery = window['$'];
 // Lazy loaded
 // import { ProfileComponent } from './user/profile/profile.component';
 // import { EventService } from './shared/event.service';
@@ -34,7 +41,9 @@ import { CollapsibleWellComponent } from './collapsible/collapsible-well/collaps
     CreateSessionComponent,
     SessionsListComponent,
     CollapsibleWellComponent,
-    DurationPipe
+    DurationPipe,
+    SimpleModalComponent,
+    ModalTriggerDirective
     // Lazy loaded
     // ProfileComponent
   ],
@@ -52,7 +61,8 @@ import { CollapsibleWellComponent } from './collapsible/collapsible-well/collaps
       // Using a function to perform canDeactivate route guard
       provide: 'canDeactivateCreateEvent',
       useValue: checkDirtyState
-    }
+    },
+    { provide: JQ_TOKEN, useValue: jQuery }
   ],
   bootstrap: [AppComponent]
 })
