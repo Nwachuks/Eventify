@@ -1,6 +1,6 @@
 import { Injectable, EventEmitter } from '@angular/core';
 import { Subject, Observable } from 'rxjs';
-import { IEvent, ISession } from './event.model';
+import { IEvent, ISession } from '../event.model';
 
 @Injectable({
   providedIn: 'root'

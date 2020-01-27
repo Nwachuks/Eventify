@@ -3,8 +3,8 @@ import { NotFoundComponent } from './errors/not-found/not-found.component';
 import { CreateEventComponent } from './events/create-event/create-event.component';
 import { EventsListComponent } from './events/events-list/events-list.component';
 import { EventDetailsComponent } from './events/event-details/event-details.component';
-import { EventRouteActivatorService } from './shared/event-route-activator.service';
-import { EventsListResolverService } from './shared/events-list-resolver.service';
+import { EventRouteActivatorService } from './shared/event-route-activator/event-route-activator.service';
+import { EventsListResolverService } from './shared/event-list-resolver/events-list-resolver.service';
 import { CreateSessionComponent } from './events/create-session/create-session.component';
 
 export const appRoutes: Routes = [

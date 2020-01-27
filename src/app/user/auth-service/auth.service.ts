@@ -25,6 +25,7 @@ export class AuthService {
   }
 
   isAuthenticated() {
+    // Convert to boolean
     return !!this.currentUser;
   }
 }

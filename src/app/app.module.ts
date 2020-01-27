@@ -14,15 +14,16 @@ import { EventDetailsComponent } from './events/event-details/event-details.comp
 import { CreateEventComponent } from './events/create-event/create-event.component';
 import { CreateSessionComponent } from './events/create-session/create-session.component';
 import { SessionsListComponent } from './events/sessions-list/sessions-list.component';
+import { UpvoteComponent } from './events/upvote/upvote.component';
 
 import { NotFoundComponent } from './errors/not-found/not-found.component';
 import { CollapsibleWellComponent } from './collapsible/collapsible-well/collapsible-well.component';
 import { SimpleModalComponent } from './simple-modal/simple-modal.component';
 
-import { DurationPipe } from './shared/duration.pipe';
+import { DurationPipe } from './shared/duration/duration.pipe';
 import { JQ_TOKEN } from './shared/jQuery.service';
 
-import { ModalTriggerDirective } from './shared/modal-trigger.directive';
+import { ModalTriggerDirective } from './shared/model-trigger-directive/modal-trigger.directive';
 
 const jQuery = window['$'];
 // Lazy loaded
@@ -43,7 +44,8 @@ const jQuery = window['$'];
     CollapsibleWellComponent,
     DurationPipe,
     SimpleModalComponent,
-    ModalTriggerDirective
+    ModalTriggerDirective,
+    UpvoteComponent
     // Lazy loaded
     // ProfileComponent
   ],

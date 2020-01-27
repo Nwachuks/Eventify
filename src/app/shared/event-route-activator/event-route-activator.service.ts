@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { EventService } from './event.service';
+import { EventService } from '../event-service/event.service';
 import { CanActivate, ActivatedRouteSnapshot, Router } from '@angular/router';
 
 @Injectable({

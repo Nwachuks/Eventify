@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from './../../user/auth-service/auth.service';
-import { EventService } from './../../shared/event.service';
+import { EventService } from '../../shared/event-service/event.service';
 import { ISession } from './../../shared/event.model';
 
 @Component({

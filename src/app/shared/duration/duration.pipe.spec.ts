@@ -5,7 +5,7 @@ import { DurationPipe } from './duration.pipe';
 
 describe('Pipe: Duratione', () => {
   it('create an instance', () => {
-    let pipe = new DurationPipe();
+    const pipe = new DurationPipe();
     expect(pipe).toBeTruthy();
   });
 });

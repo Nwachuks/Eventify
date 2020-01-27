@@ -1,4 +1,4 @@
-import { EventService } from './event.service';
+import { EventService } from '../event-service/event.service';
 import { Injectable } from '@angular/core';
 import { Resolve } from '@angular/router';
 import { map } from 'rxjs/operators';
