@@ -10,7 +10,7 @@ export class SimpleModalComponent implements OnInit {
   @Input() title: string;
   @Input() elementId: string;
   @Input() closeBodyOnClick: string;
-  @ViewChild('modelContainer') containerEl: ElementRef;
+  @ViewChild('modalContainer') containerEl: ElementRef;
 
   constructor(@Inject(JQ_TOKEN) private $: any) { }
 
