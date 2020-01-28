@@ -18,15 +18,20 @@ export class EventDetailsComponent implements OnInit {
   constructor(private eventService: EventService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    // For routing to the same component in case of search sessions
-    this.route.params.forEach((params: Params) => {
-      this.eventService.getEvent(+params['id']).subscribe((event: IEvent) => {
-        this.event = event;
-
-        // Keep the state constant when routing to same component
-        this.addMode = false;
-      });
+    this.route.data.forEach((data) => {
+      this.event = data['event'];
+      this.addMode = false;
     });
+
+    // For routing to the same component in case of search sessions
+    // this.route.params.forEach((params: Params) => {
+    //   this.eventService.getEvent(+params['id']).subscribe((event: IEvent) => {
+    //     this.event = event;
+
+    //     // Keep the state constant when routing to same component
+    //     this.addMode = false;
+    //   });
+    // });
 
     // this.event = this.eventService.getEvent(+this.route.snapshot.params['id']);
   }
