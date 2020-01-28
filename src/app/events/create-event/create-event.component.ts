@@ -18,11 +18,11 @@ export class CreateEventComponent implements OnInit {
   }
 
   saveEvent(formValues) {
-    // console.log(formValues);
-    this.eventService.saveEvent(formValues);
-    // Set isDirty to false to allow routing
-    this.isDirty = false;
-    this.router.navigate(['/events']);
+    this.eventService.saveEvent(formValues).subscribe(() => {
+      // Set isDirty to false to allow routing
+      this.isDirty = false;
+      this.router.navigate(['/events']);
+    });
   }
 
   cancel() {

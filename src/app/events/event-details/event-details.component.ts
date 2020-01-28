@@ -47,6 +47,7 @@ export class EventDetailsComponent implements OnInit {
     // Increment the id and assign it to new session
     session.id = nextId + 1;
     this.event.sessions.push(session);
+    this.eventService.saveEvent(this.event).subscribe();
 
     // Make the sessions list appear again (and create new session form disappear)
     this.addMode = false;
@@ -55,5 +56,4 @@ export class EventDetailsComponent implements OnInit {
   cancelAddSession() {
     this.addMode = false;
   }
-
 }
