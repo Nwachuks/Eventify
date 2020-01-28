@@ -360,26 +360,29 @@ export class EventService {
   }
 
   searchSessions(searchTerm: string) {
-    const term = searchTerm.toLocaleLowerCase();
-    let results: ISession[] = [];
+    return this.http.get<ISession[]>('/api/sessions/search?search=' + searchTerm)
+    .pipe(catchError(this.handleError<ISession[]>('searchSessions')));
 
-    this.EVENTS.forEach(event => {
-      // Get list of sessions that contain the search term
-      const matchingSessions = event.sessions.filter(session => session.name.toLocaleLowerCase().indexOf(term) > -1);
-      // Get the event id for each of the matched sessions
-      matchingSessions.map((session: any) => {
-        session.eventId = event.id;
-        return session;
-      });
-      // Put the sessions result array into the results array
-      results = results.concat(matchingSessions);
-    });
+  //   const term = searchTerm.toLocaleLowerCase();
+  //   let results: ISession[] = [];
 
-    const emitter = new EventEmitter(true);
-    setTimeout(() => {
-      emitter.emit(results);
-    }, 100);
-    return emitter;
+  //   this.EVENTS.forEach(event => {
+  //     // Get list of sessions that contain the search term
+  //     const matchingSessions = event.sessions.filter(session => session.name.toLocaleLowerCase().indexOf(term) > -1);
+  //     // Get the event id for each of the matched sessions
+  //     matchingSessions.map((session: any) => {
+  //       session.eventId = event.id;
+  //       return session;
+  //     });
+  //     // Put the sessions result array into the results array
+  //     results = results.concat(matchingSessions);
+  //   });
+
+  //   const emitter = new EventEmitter(true);
+  //   setTimeout(() => {
+  //     emitter.emit(results);
+  //   }, 100);
+  //   return emitter;
   }
 
   // Handle errors from the server
