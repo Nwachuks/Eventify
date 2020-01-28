@@ -32,8 +32,13 @@ export class AuthService {
   }
 
   updateCurrentUser(firstName: string, lastName: string) {
+    // Persist on client
     this.currentUser.firstname = firstName;
     this.currentUser.lastname = lastName;
+
+    // Persist on client
+    const options = { headers: new HttpHeaders({ 'Content-Type': 'application/json'})};
+    return this.http.put(`/api/users/${this.currentUser.id}`, this.currentUser, options);
   }
 
   isAuthenticated() {
