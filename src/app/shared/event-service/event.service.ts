@@ -326,6 +326,10 @@ export class EventService {
 
   constructor(private http: HttpClient) { }
 
+  getEventss() {
+    return this.EVENTS;
+  }
+
   getEvents(): Observable<IEvent[]> {
     // Getting data from the server
     return this.http.get<IEvent[]>('/api/events').pipe(catchError(this.handleError<IEvent[]>('getEvents', [])));
